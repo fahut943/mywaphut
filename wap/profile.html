@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ประวัติส่วนตัว - fahut</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="top"></div>
+  
+  <div class="middle">
+    <a href="index.html" class="home-btn">Home</a>
+
+    <div class="menu">
+      <button onclick="showSection('info')">ข้อมูลทั่วไป</button>
+      <button onclick="showSection('education')">ประวัติการศึกษา</button>
+      <button onclick="showSection('work')">ผลงาน / กิจกรรม / รางวัล</button>
+      <button onclick="showSection('skills')">ทักษะ / ความสามารถพิเศษ</button>
+      <button onclick="showSection('inspiration')">แรงบันดาลใจ / ความตั้งใจ</button>
+    </div>
+  </div>
+
+  <div class="bottom">
+    <div id="info" class="section">
+      <h2>ข้อมูลทั่วไป</h2>
+      <p><strong>ชื่อ:</strong> ยศภัทร หมวดศรี</p>
+      <p><strong>ชื่อเล่น:</strong> ฟาฮัร</p>
+      <p><strong>วันเกิด:</strong> 11/2/2551</p>
+      <p><strong>อายุ:</strong> 17 ปี</p>
+      <p><strong>สัญชาติ/ศาสนา:</strong> ไทย / อิสลาม</p>
+      <p><strong>ที่อยู่:</strong> ฉะเชิงเทรา</p>
+      <p><strong>อีเมล:</strong> fahut1001l@gmail.com</p>
+    </div>
+
+    <div id="education" class="section">
+      <h2>ประวัติการศึกษา</h2>
+      <p>ประถมศึกษาปีที่ 1-6: โรงเรียนสุเหร่าใหม่</p>
+      <p>มัธยมศึกษาปีที่ 1-6: โรงเรียนหมอนทองวิทยา</p>
+      <p>แผนการเรียน: คอมพิวเตอร์ธุรกิจ</p>
+    </div>
+
+    <div id="work" class="section">
+      <h2>ผลงาน / กิจกรรม / รางวัล</h2>
+      <ul>
+        <li>การแข่งขันตอบปัญหาวิทยาศาสตร์</li>
+        <li>ฐานกิจกรรมคอมพิวเตอร์</li>
+        <li>เข้าร่วมกิจกรรมพัฒนาทักษะด้านเทคโนโลยี</li>
+      </ul>
+    </div>
+
+    <div id="skills" class="section">
+      <h2>ทักษะ / ความสามารถพิเศษ</h2>
+      <ul>
+        <li>เขียน HTML / CSS เบื้องต้น</li>
+        <li>ใช้ Microsoft Office ได้ดี</li>
+        <li>ออกแบบโปสเตอร์ด้วย Canva</li>
+        <li>ตัดต่อวิดีโอพื้นฐาน</li>
+      </ul>
+    </div>
+
+    <div id="inspiration" class="section">
+      <h2>แรงบันดาลใจ / ความตั้งใจ</h2>
+      <p>ที่เรียนสายคอมพิวเตอร์เพราะชอบ อยากมีความรู้เรื่องนี้เพิ่มเติม รวมถึงอยากศึกษาต่อในระดับอุดมศึกษาเพื่อพัฒนาทักษะด้านไอที และสามารถนำไปใช้ในการทำงานจริงในอนาคต</p>
+    </div>
+  </div>
+
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll('.section');
+      sections.forEach(sec => sec.style.display = 'none');
+      document.getElementById(id).style.display = 'block';
+    }
+
+    // แสดงหัวข้อแรกโดยอัตโนมัติ
+    showSection('info');
+  </script>
+</body>
+</html>
